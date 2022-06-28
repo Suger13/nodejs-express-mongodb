@@ -36,8 +36,8 @@ const productController = {
         }).status(200)
     },
     createProduct(req,res){
-        const { id, name } = req.body;
-        product.push({id,  name});
+        const { id, name, price } = req.body;
+        product.push({id,  name, price});
         
         res.json({
             success: true,
