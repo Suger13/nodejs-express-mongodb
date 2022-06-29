@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="text" id="text">
+    <button onclick="encode()">Encode</button>
+    <p id="output">encoded Here</p>
+    <p id="output2">decoded here</p>
+
+    <script>
+        // const text = document.getElementById("text").value;
+        const output = document.getElementById("output");
+        
+        function encode(){
+            let text = document.getElementById("text").value;
+            let output = document.getElementById("output");
+
+            let encoded = output.innerHTML = window.btoa(text);
+
+            let decoded = output2.innerHTML = window.atob(encoded)
+        }
+    </script>
+</body>
+</html>
