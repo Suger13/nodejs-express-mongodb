@@ -5,8 +5,9 @@ const port = process.env.PORT;
 const productRoute = require('./src/module/route/product.route');
 const mongoose = require("mongoose");
 
+//db config
+mongoose.connect(process.env.DB_CONNECTION, {useNewUrlParser: true})
 
-mongoose.connect(process.env.DB_CONNECT, { urlencoded: true })
 
 
 const app = express();
