@@ -1,9 +1,10 @@
 const express = require("express");
 const cors = require('cors');
 require("dotenv").config();
-const port = process.env.PORT;
+const port = process.env.PORT || 3030;
 const productRoute = require('./src/module/route/product.route');
 const mongoose = require("mongoose");
+
 
 //db config
 mongoose.connect(process.env.DB_CONNECTION, {useNewUrlParser: true})
@@ -12,6 +13,7 @@ mongoose.connect(process.env.DB_CONNECTION, {useNewUrlParser: true})
 
 const app = express();
 app.use(express.json());
+app.use(cors())
 app.use(express.urlencoded({extended:true}));
 
 app.use('/product', productRoute)

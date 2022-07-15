@@ -1,0 +1,1 @@
+console.log(encodeURIComponent("[a]0 7 7 05 4 6 4 5")) //%5Ba%5D0%207%207%2005%204%206%204%205

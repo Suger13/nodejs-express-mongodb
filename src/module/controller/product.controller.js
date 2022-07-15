@@ -1,3 +1,6 @@
+const humps = require('humps')
+const ProductService = require('../services/product.service')
+
 const product = [
     {
         id : 1,
@@ -35,13 +38,12 @@ const productController = {
             data: found
         }).status(200)
     },
-    createProduct(req,res){
-        const { id, name, price } = req.body;
-        product.push({id,  name, price});
-        
+    async createProduct(req,res){
+        const { name, quantity, quality } = req.body;
+
         res.json({
             success: true,
-            data: product
+            data: await ProductService.create({ name, quantity, quality })
         }).status(201)
     }
 }
