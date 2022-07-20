@@ -21,7 +21,6 @@ const product = [
     }
 ]
 
-//Hello
 const productController = {
     getProduct(req,res){
         const price = req.query.price || 0
