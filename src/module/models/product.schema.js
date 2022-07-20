@@ -1,10 +1,10 @@
 const { Schema, model } = require("mongoose");
 const StatusEnum = require("../../common/status.enum");
-const status = require('../../common/status.enum');
+
 
 const ProductSchema = new Schema({
     name: {
-        type: String,
+            type: String,
         required: true
     },
     quantity: {
