@@ -39,11 +39,11 @@ const productController = {
         }).status(200)
     },
     async createProduct(req,res){
-        const { name, quantity, quality } = req.body;
+        const { name, quantity, quality, exp } = req.body;
 
         res.json({
             success: true,
-            data: await ProductService.create({ name, quantity, quality })
+            data: await ProductService.create({ name, quantity, quality, exp })
         }).status(201)
     }
 }

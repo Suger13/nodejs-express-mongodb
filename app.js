@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 
 
 //db config
+//uri
 mongoose.connect(process.env.DB_CONNECTION, {useNewUrlParser: true})
 
 

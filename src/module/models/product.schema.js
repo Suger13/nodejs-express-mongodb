@@ -15,6 +15,10 @@ const ProductSchema = new Schema({
         type: Number,
         default: 0
     },
+    exp:{
+        type: Number,
+        required: true
+    },
     status: {
         type: String,
         defalut: StatusEnum.ACTIVE
