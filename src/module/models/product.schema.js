@@ -4,7 +4,7 @@ const StatusEnum = require("../../common/status.enum");
 
 const ProductSchema = new Schema({
     name: {
-            type: String,
+        type: String,
         required: true
     },
     quantity: {
@@ -25,6 +25,6 @@ const ProductSchema = new Schema({
     }
 }, { timestamps: true, strict: true})  //"strict" not allow other data out of scheema to import!
 
-const ProductModel = model('product', ProductSchema);
+const ProductModel = model('product', ProductSchema);  //paramiter  1.payloadที่จะใส่เข้าไป  2.Schemaที่เป็นตัวกำกับชนิดของข้อมูล
 
 module.exports = ProductModel;
